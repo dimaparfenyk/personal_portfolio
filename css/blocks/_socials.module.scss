@@ -1,0 +1,40 @@
+@use "../_variables.module" as vars;
+
+.socials {
+  display: flex;
+  column-gap: 32px;
+}
+
+.socials_item {
+  width: 24px;
+  height: 24px;
+}
+
+@font-face {
+  font-family: "social-icons";
+  src: url("../../images/socials-svg/fonts/icomoon.woff") format("woff"),
+    url("../../images/socials-svg/fonts/icomoon.ttf") format("ttf"),
+    url("../../images/socials-svg/fonts/icomoon.eot") format("eot");
+}
+
+.icon {
+  font-family: "social-icons";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: vars.$highlight-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@each $social, $code in vars.$icons {
+  .icon-#{$social}::before {
+    content: $code;
+  }
+}

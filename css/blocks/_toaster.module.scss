@@ -1,0 +1,16 @@
+.toaster {
+  min-width: 300px;
+
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.toaster.success {
+  background: linear-gradient(to right, #00b09b, #96c93d);
+}
+
+.toaster.error {
+  background: linear-gradient(to right, #ff6a00, #ff0000);
+}
