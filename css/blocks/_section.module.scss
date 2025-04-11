@@ -1,0 +1,18 @@
+@use "../_variables.module.scss" as vars;
+
+.section {
+  // background-color: vars.$primary-bg;
+}
+
+.section__title {
+  margin-bottom: 24px;
+  font-size: 32px;
+  color: vars.$title-dark-color;
+}
+
+.section__text {
+  margin-bottom: 48px;
+  font-size: 16px;
+  line-height: 1.24;
+  letter-spacing: 0.16px;
+}

@@ -1,0 +1,38 @@
+@use "../_variables.module" as vars;
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & .section__text {
+    max-width: 440px;
+  }
+}
+
+.portfolio__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.portfolio__item {
+  flex-basis: calc(33.333% - 40px);
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: rgba(49, 21, 4, 0.07) 7px 4px 14px;
+  background-color: vars.$primary-bg;
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 12px;
+  }
+}
+
+.portfolio__img {
+  width: 310px;
+  object-fit: cover;
+  object-position: top;
+  height: 300px;
+}

@@ -19,8 +19,7 @@
 
 .icon {
   font-family: "social-icons";
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -31,6 +30,12 @@
   color: vars.$highlight-text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: 0.3s all ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: vars.$accent-bg;
+  }
 }
 
 @each $social, $code in vars.$icons {

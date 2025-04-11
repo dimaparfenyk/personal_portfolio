@@ -1,0 +1,46 @@
+@use "../_variables.module" as vars;
+
+.main-container {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  margin-bottom: 70px;
+  padding: 72px 60px;
+  background-image: url("../../images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: vars.$primary-bg;
+}
+
+.hero__about {
+  max-width: 60%;
+}
+
+.title {
+  margin-bottom: 18px;
+  font-size: 48px;
+  line-height: 1.24;
+  letter-spacing: 1px;
+  color: vars.$title-dark-color;
+
+  & .highlight-title-text {
+    color: vars.$highlight-text-color;
+  }
+}
+
+.hero__text {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 1.24;
+  letter-spacing: 0.16px;
+}
+
+.hero__img_box {
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+}
