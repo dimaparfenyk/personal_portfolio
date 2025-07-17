@@ -1,7 +1,11 @@
 @use "../_variables.module.scss" as vars;
 
-.section {
-  // background-color: vars.$primary-bg;
+.main-container {
+  padding-bottom: 72px;
+}
+
+.section + .section {
+  margin-top: 72px;
 }
 
 .section__title {
@@ -11,6 +15,7 @@
 }
 
 .section__text {
+  max-width: 560px;
   margin-bottom: 48px;
   font-size: 16px;
   line-height: 1.24;

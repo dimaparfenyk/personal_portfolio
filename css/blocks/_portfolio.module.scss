@@ -4,10 +4,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  & .section__text {
-    max-width: 440px;
-  }
 }
 
 .portfolio__list {
@@ -18,8 +14,9 @@
 }
 
 .portfolio__item {
+  position: relative;
   flex-basis: calc(33.333% - 40px);
-  padding: 4px;
+  padding: 8px;
   border-radius: 8px;
   box-shadow: rgba(49, 21, 4, 0.07) 7px 4px 14px;
   background-color: vars.$primary-bg;
@@ -31,8 +28,18 @@
 }
 
 .portfolio__img {
-  width: 310px;
+  margin-bottom: 10px;
   object-fit: cover;
-  object-position: top;
-  height: 300px;
+  aspect-ratio: 3 / 4;
+}
+
+.card-title {
+  color: vars.$title-dark-color;
+}
+
+.gh-link {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-size: 28px;
 }
