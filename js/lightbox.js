@@ -1,20 +1,18 @@
-const lightbox = new SimpleLightbox(".certificates__link", {
-  captions: true,
-  captionPosition: "bottom",
+// Инициализация SimpleLightbox для галереи сертификатов
+// Ожидаем загрузки DOM перед инициализацией
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = new SimpleLightbox(".certificates__link", {
+    captions: true,
+    captionPosition: "bottom",
+    animation: "fade",
+    animationSpeed: 250,
+    showCounter: true,
+    nav: true,
+    keyboardNav: true,
+    close: true,
+    closeButton: true,
+    captionDelay: 250,
+    scale: 1,
+    padding: 10,
+  });
 });
-// console.log(lightbox);
-const users = [
-  { id: 1, name: "Alice" },
-  { id: 2, name: "Bob" },
-  { id: 1, name: "Alice" },
-  { id: 3, name: "Charlie" },
-  { id: 2, name: "Bob" },
-  { id: 4, name: "Diana" },
-];
-
-const arr = users.filter((user, index, arr) => {
-  const curIndex = arr.findIndex(({ id }) => id === user.id);
-
-  return curIndex === index;
-});
-console.log("arr :>> ", arr);
